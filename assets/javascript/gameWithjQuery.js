@@ -26,15 +26,15 @@ function nextQuestion() { //This is a function for resetting to get the next que
     	if(currentOption[i] === " "){
     		hiddenAns = hiddenAns + " ";	
     	}else{
-    		  hiddenAns += "-";
+    		  hiddenAns += "-";   
     	}
       
     }
-    // console.log(hiddenAns);
+    console.log(hiddenAns);
 
 
-    document.querySelector(".dash")
-        .innerHTML = hiddenAns;
+    $(".dash").html(hiddenAns);
+
 
 
 }
@@ -47,10 +47,10 @@ nextQuestion();
 
 
 
-document.addEventListener("keyup", function(event) { //can also be written as document.onkeyup = function(event){}
+$(document).on('keyup', function(event) { //can also be written as document.onkeyup = function(event){} and also 
+    // document.addEventLIstener('keyup', function(event)){}
 
-    document.querySelector(".title")
-        .innerHTML = 'Press Any Key to get Started';
+    $(".title").html();
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase(); //converting user guesses into a string of lowercase
 
     var revealing = currentOption.indexOf(userGuess);
@@ -92,23 +92,16 @@ document.addEventListener("keyup", function(event) { //can also be written as do
 
 
         if (hiddenAns === currentOption) {
-            wins++;
+             wins++;
             nextQuestion();
-
-
-            return;
+             return;
 
         }
 
+        $('.winIncrement').html(wins);
+       $(".dash").html(hiddenAns);
 
 
-
-        document.querySelector(".dash")
-            .innerHTML = hiddenAns;
-
-
-        document.querySelector('.wins')
-            .innerHTML = 'Wins : ' + wins;
 
 
         // lose case
@@ -121,15 +114,13 @@ document.addEventListener("keyup", function(event) { //can also be written as do
             // console.log(wrongGuess);
 
 
-            document.querySelector(".lose")
-                .innerHTML = '<br>' + 'Number of Guesses Remaining' + '</br>' + lose--;
+            $(".loseDecrement").html(lose--);
 
         }
 
 
 
-        document.querySelector(".alreadyGuessed")
-            .innerHTML = 'Letters Already Guessed [' + wrongGuess + ']';
+        $(".letters").html('[' + wrongGuess + ']');
         // console.log('wrongGuess' + wrongGuess);
 
 

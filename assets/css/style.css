@@ -1,0 +1,92 @@
+
+
+.image{
+
+	width:50%;
+	height:150px;
+	margin:0 200px;
+	/*text-align: center;*/
+}
+
+
+
+.body{
+	border:1px solid white;
+
+}
+
+body{
+
+
+	/*margin:0 40px;*/
+	background: black;
+	/*background-image: url('../images/background.jpg');*/
+	background-repeat: no-repeat;
+	/*margin-top: 50px;*/
+	/*float:right;*/
+	/*border:1px dotted white;*/
+	/*padding:20px;*/
+}
+
+.title, .subtitle{
+
+	font-size: 20px;
+	color:#ffffff;
+	text-align: center;
+	margin-bottom: 15px;
+	color:#63ea63;
+	/*margin-left: 10px;*/
+	/*float:right;*/
+	/*margin: 20px 250px;*/
+	
+}
+
+.word, .dash{
+	font-size: 15px;
+	color:#ffffff;
+	float:right;
+	/*margin: 0px 100px;*/
+	clear:right;
+	display: inline-block;
+	margin:10px 20px;
+	margin-right: 20%;
+}
+
+.wins{
+	color:#ffffff;
+	float:right;
+	clear:right;
+	margin-right: 20%;
+	line-height: 68px;
+}
+
+.alreadyGuessed{
+	color:#ffffff;
+	clear:right;
+		float:right;
+	margin-right: 20%;
+	line-height: 68px;
+}
+
+.lose{
+	color:#ffffff;
+	clear:right;
+	float:right;
+	margin-right: 20%;
+	/*line-height: 68px;*/
+}
+
+.hangman{
+
+	display: inline-block;
+	float: left;
+	width:40%;
+	height:300px;
+	/*line-height: 68px;*/
+	/*margin: 40px 100px;*/
+}
+
+.betterLuck{
+	color:#ffffff;
+	text-align: center;
+}
