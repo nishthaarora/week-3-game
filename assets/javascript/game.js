@@ -1,10 +1,10 @@
-var option = ["lord of the rings", "avatar", "casino royale", "interstellar", 
+var option = ["lord of the rings", "avatar", "casino royale", "interstellar",
 "jurassic park", "harry potter", "sherlock homes", "life of pi"]; //options is a random questions
 var wins = 0; 	//number of games won
 var hiddenAns = "";	//hidden answer are dashes which will come according to the length of the guess
 var lose = 10; //lose are the number of chances given to the user to guess
 var currentOption; //current option is the current question
-// var addUserGuess = []; 
+// var addUserGuess = [];
 var wrongGuess = []; //wrong guess is an array of letters already guessed by the user
 
 
@@ -19,16 +19,16 @@ function nextQuestion() { //This is a function for resetting to get the next que
     console.log(currentOption);
 
     lose = 10; //initialising losing chances
-    hiddenAns = ""; //initialising the hidden answer after reaching to next question		
+    hiddenAns = ""; //initialising the hidden answer after reaching to next question
     wrongGuess = [];
 
     for (var i = 0; i < currentOption.length; i++) { //this forLoop will is running for a particular index
     	if(currentOption[i] === " "){
-    		hiddenAns = hiddenAns + " ";	
+    		hiddenAns = hiddenAns + " ";
     	}else{
     		  hiddenAns += "-";
     	}
-      
+
     }
     // console.log(hiddenAns);
 
@@ -83,7 +83,7 @@ document.addEventListener("keyup", function(event) { //can also be written as do
         for (var z = 0; z < hiddenAnsArray.length; z++) {
             if (currentOption[z] === userGuess) {
                 hiddenAnsArray[z] = userGuess;
-            } 
+            }
 
             hiddenAns = hiddenAnsArray.join('');
         }
